@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nokia Snake — HTML5 Canvas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="phone">
+    <!-- speaker grille + brand, for that candybar-phone look -->
+    <div class="speaker"><span></span><span></span><span></span></div>
+    <div class="brand">SNAKE II</div>
+
+    <!-- the green LCD screen -->
+    <section class="screen">
+      <div class="statusbar">
+        <span>SCORE <b id="score">000</b></span>
+        <span>HI <b id="high">000</b></span>
+      </div>
+      <!-- everything in the play area is drawn here, pixel by pixel -->
+      <canvas id="lcd" width="400" height="320"></canvas>
+    </section>
+
+    <!-- options row -->
+    <div class="options">
+      <label class="switch">
+        <input type="checkbox" id="wrapToggle" />
+        <span>Walls wrap</span>
+      </label>
+      <button id="restart">Restart</button>
+    </div>
+
+    <!-- D-pad for touch / mouse play -->
+    <div class="dpad">
+      <button id="up"    class="key up"    aria-label="Up">▲</button>
+      <button id="left"  class="key left"  aria-label="Left">◀</button>
+      <button id="right" class="key right" aria-label="Right">▶</button>
+      <button id="down"  class="key down"  aria-label="Down">▼</button>
+      <span class="hub"></span>
+    </div>
+  </main>
+
+  <p class="hint">
+    Arrow keys / WASD to steer · eat the blip · don't bite yourself.
+    Snake speeds up as you grow. Built with HTML5 Canvas
+    Product of Ibrahim Sudheysi Ali :)
+  </p>
+
+  <script src="snake.js"></script>
+</body>
+</html>
